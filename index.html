@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Controle de Ponto</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>📊 Controle de Ponto</h1>
+
+    <select id="funcionario">
+        <option value="">Selecione o funcionário</option>
+    </select>
+
+    <div class="buttons">
+        <button onclick="registrar('entrada')">Entrada</button>
+        <button onclick="registrar('saida')">Saída</button>
+    </div>
+
+    <h3>📅 Filtrar por data</h3>
+    <input type="date" id="filtroData" onchange="filtrar()">
+
+    <h2>📋 Registros</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Horas Trabalhadas</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody id="tabela"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
